@@ -18,7 +18,7 @@ user = {
 
 @app.route("/")
 def get_feature():  
-    ldclient.set_config(Config("sdk-ccb06a70-1a99-40b0-8fd0-9936de38354d"))
+    ldclient.set_config(Config("insert-sdk"))
     show_feature = ldclient.get().variation("kptest", user, "No Data")
     if show_feature == True:
         r = requests.get("https://swapi.dev/api/people/1/").json()
